@@ -11,7 +11,7 @@ app.get('/health', (req, res) => {
 })
 
 app.get('/version', (req, res) => {
-  res.send('Current deployed version: v10')
+  res.send('Current deployed version: v11')
 })
 
 app.listen(PORT, () => {
