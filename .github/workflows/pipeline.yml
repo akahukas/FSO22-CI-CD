@@ -31,4 +31,4 @@ jobs:
         with:
           heroku_api_key: ${{secrets.HEROKU_AUTH_TOKEN}}
           heroku_app_name: "pure-beach-43727"
-          heroku_email: "saku.hakamaki66@gmail.com"
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
