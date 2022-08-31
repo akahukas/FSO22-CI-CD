@@ -40,6 +40,21 @@ jobs:
           healthcheck: "https://pure-beach-43727.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
+      - name: The deployment to Heroku has succeeded
+        if: ${{ success() }}
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: info
+          text: A new version of Pokedex deployed!
+          details: "to https://pure-beach-43727.herokuapp.com/ by sakuhakamaki"
+      - name: The deployment to Heroku has failed
+        if: ${{ failure() }}
+        uses: rjstone/discord-webhook-notify@v1
+        with:
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          severity: error
+          text: Build failed.
   tag_release:
     if: ${{ github.event_name == 'push' }}
     needs: [simple_deployment_pipeline]
