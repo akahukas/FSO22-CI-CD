@@ -37,9 +37,6 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_AUTH_TOKEN}}
           heroku_app_name: "pure-beach-43727"
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-          healthcheck: "https://pure-beach-43727.herokuapp.com/health"
-          checkstring: "ok"
-          rollbackonhealthcheckfailed: true
       - name: The deployment to Heroku has succeeded
         if: ${{ success() }}
         uses: rjstone/discord-webhook-notify@v1
