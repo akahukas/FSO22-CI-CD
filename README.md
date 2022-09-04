@@ -1,15 +1,9 @@
-# Full Stack open CI/CD
+# Full Stack Open CI/CD
 
-This repository is used for the CI/CD module of the Full stack open course
+---
 
-Fork the repository to complete course exercises
+### This repository is used for the CI/CD module of the [Full Stack Open](https://fullstackopen.com/) -course.
 
-## Commands
+### Implementation of the "Your own pipeline" (11.20) -task can be found on [FSO22-CI-CD-pipeline](https://github.com/sakuhakamaki/FSO22-CI-CD-pipeline) -repository.
 
-Start by running `npm install` inside the project folder
-
-`npm start` to run the webpack dev server
-`npm test` to run tests
-`npm run eslint` to run eslint
-`npm run build` to make a production build
-`npm run start-prod` to run your production build
+---
